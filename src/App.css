@@ -1,0 +1,89 @@
+#todo-list > li{
+    /* background-color: rgba(156, 166, 187, 0.411); */
+    list-style-type: none;
+    width: 150px;
+    height: 120px;
+    border: solid 1px rgba(104, 103, 103, 0.473);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: all .1s ease-in-out;
+    z-index: 100;
+}
+
+#todo-list > li:hover{
+    transform: scale(1.01);
+    background-color: rgba(232, 232, 235, 0.432);
+}
+
+.title{
+    margin-top: 5px;
+    margin-left: 5px;
+    border-bottom: solid 1px rgba(179, 179, 179, 0.473);
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+
+.li-button{
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-top: 13%;
+}
+
+.description{
+    margin: 3%;
+}
+
+#todo-list{
+    width: 270px;
+}
+
+.current-task{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 250px;
+    top: 15px;
+    border: solid 1px rgba(104, 103, 103, 0.473);
+    /* background-color: rgba(156, 166, 187, 0.171); */
+    transition: all .5s ease-in-out;
+}
+
+.current-task-button{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid rgba(104, 104, 104, 0.452);
+    border-radius: 10px; 
+    transition: all .1s ease-in-out;
+}
+
+.current-task-button:hover {
+     background-color: rgb(240, 240, 240);
+     transform: scale(1.05);
+}
+
+.current-task{
+     animation: current-task .1s linear;
+}
+
+.more {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+    height: 50%;
+    margin-top: 5%;
+    color: rgb(158, 158, 158);
+}
+
+@keyframes current-task{
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
